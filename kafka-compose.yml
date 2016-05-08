@@ -15,8 +15,6 @@ kafka1:
   container_name: kafka1
   domainname: hadoop
   net: hadoop
-  environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.10.123
   env_file:
         - ./kafka.env
   volumes:
@@ -30,8 +28,6 @@ kafka2:
   container_name: kafka2
   domainname: hadoop
   net: hadoop
-  environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.10.123
   env_file:
         - ./kafka.env
   volumes:
@@ -45,8 +41,6 @@ kafka3:
   container_name: kafka3
   domainname: hadoop
   net: hadoop
-  environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.10.123
   env_file:
         - ./kafka.env
   volumes:
