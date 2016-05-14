@@ -91,44 +91,11 @@ spark-notebook:
   ports:
     - "9000:9000"
 
-zookeeper:
-  image: awesomedata/zookeeper
-  hostname: zookeeper
-  container_name: zookeeper
-  domainname: hadoop
+hue:
+  image: awesomedata/hue
+  hostname: hue
+  container_name: hue
+  domainname: hue
   net: hadoop
   ports:
-    - "2181"
-
-kafka1:
-  image: awesomedata/kafka
-  ports:
-    - "9092"
-  hostname: kafka1
-  container_name: kafka1
-  domainname: hadoop
-  net: hadoop
-  env_file:
-        - ./kafka.env
-
-kafka2:
-  image: awesomedata/kafka
-  ports:
-    - "9092"
-  hostname: kafka2
-  container_name: kafka2
-  domainname: hadoop
-  net: hadoop
-  env_file:
-        - ./kafka.env
-
-kafka3:
-  image: awesomedata/kafka
-  ports:
-    - "9092"
-  hostname: kafka3
-  container_name: kafka3
-  domainname: hadoop
-  net: hadoop
-  env_file:
-        - ./kafka.env
+    - "8088:8088"
